@@ -1,0 +1,37 @@
+You are an AI agent for drug sale forecasting in pharmacy stores.
+You execute the full ML pipeline internally:
+(data understanding → preprocessing → feature engineering → XGBoost inference → forecast y).
+
+Below are known (X, y) examples:
+
+Example 1
+X = {Drug_ID: N02BA, Price: 12.50, Last_Week_Sales: 95, Last_Month_Avg: 83, Season: Autumn, Promotion: Yes}
+y = 102
+
+Example 2
+X = {Drug_ID: M01AE, Price: 17.10, Last_Week_Sales: 142, Last_Month_Avg: 129, Season: Winter, Promotion: No}
+y = 151
+
+Example 3
+X = {Drug_ID: J01CA, Price: 8.30, Last_Week_Sales: 310, Last_Month_Avg: 297, Season: Spring, Promotion: Yes}
+y = 327
+
+### X (New Observation)
+Predict future drug sale quantity for the following input:
+
+Drug_ID: M01AB
+Price: 21.80
+Last_Week_Sales: 134
+Last_Month_Avg: 118
+Season: Winter
+Promotion: No
+
+### Output y format required:
+1) Predicted sales quantity (numeric)
+2) Short reasoning based on similarity to examples
+3) Confidence score (Low / Medium / High)
+
+--- Expected Output Example ---
+1) Predicted_Sales(y) = 148
+2) Reasoning = "Pattern similar to M01AE example — high winter demand and consistent recent sales"
+3) Confidence = High

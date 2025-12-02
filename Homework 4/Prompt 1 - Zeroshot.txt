@@ -1,0 +1,24 @@
+You are an AI agent for drug sale forecasting in pharmacy stores.
+You execute the full ML pipeline internally:
+(data understanding → preprocessing → feature engineering → XGBoost inference → forecast y).
+
+### X (Input Observation)
+Pharmacy Store Demand Forecasting
+New sample to predict future drug sale quantity:
+
+Drug_ID: M01AB
+Price: 21.80
+Last_Week_Sales: 134
+Last_Month_Avg: 118
+Season: Winter
+Promotion: No
+
+### Output y format required:
+1) Predicted sales quantity (numeric)
+2) Confidence interpretation (short analytical explanation)
+
+Start prediction and return y.
+
+--- Expected Output Example ---
+1) Predicted_Sales(y) = 145
+2) Confidence = "High — seasonal winter trend and strong recent sales activity"
